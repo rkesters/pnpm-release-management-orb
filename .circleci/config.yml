@@ -60,7 +60,7 @@ workflows:
           name: trigger-integration-dev
           requires:
             - orb-tools/publish-dev
-          context: orb-token
+          context: orb_context
 
   # This `integration-tests_prod-release` workflow will only run
   # when the run-integration-tests pipeline parameter is set to true.
@@ -93,4 +93,4 @@ workflows:
           filters:
             branches:
               only: main
-          context: orb-token
+          context: orb_context
