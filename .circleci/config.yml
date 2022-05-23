@@ -8,7 +8,7 @@ version: 2.1
 # add your orb below, to be used in integration tests (note: a @dev:alpha
 # release must exist.);
 orbs:
-  release-management: rkesters/pnpm-release-management@<<pipeline.parameters.dev-orb-version>>
+  release-management: salesforce/npm-release-management@4
   orb-tools: circleci/orb-tools@9.0
 
 # Pipeline parameters

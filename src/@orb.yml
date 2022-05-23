@@ -4,7 +4,7 @@
 # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
 
 version: "2.1"
-description: "Orb for releasing npm packages"
+description: "Orb for releasing pnpm packages"
 orbs:
   aws-cli: circleci/aws-cli@1.2
   jq: circleci/jq@2.2
