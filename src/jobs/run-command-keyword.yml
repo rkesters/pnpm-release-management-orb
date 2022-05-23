@@ -23,6 +23,7 @@ steps:
   - install-node:
       version: <<parameters.node_version>>
       os: linux
+  - install-pnpm
   - checkout
   - run:
       name: Determine Sandbox NUTs
@@ -59,11 +60,11 @@ steps:
         if [[ "$MESSAGE" == *"$GIT_KEY_WORD"* ]]; then
             npm install sfdx-cli --global
             sfdx -v
-            yarn
-            yarn build
+            pnpm install 
+            pnpm build
             echo "Environment Variables:"
             env
-            yarn <<parameters.command>>
+            pnpm <<parameters.command>>
         else
             echo "keyword not found, "
         fi

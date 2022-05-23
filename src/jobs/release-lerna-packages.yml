@@ -50,10 +50,10 @@ steps:
   - configure-github
   - run:
       name: Install dependencies
-      command: yarn
+      command: pnpm install 
   - run:
       name: Build
-      command: yarn build
+      command: pnpm build
   # - if environment looks like it is prepped to do change cases, and we're on "latest" tag
   - when:
       condition:

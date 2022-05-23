@@ -98,6 +98,6 @@ steps:
               Start-Sleep -Seconds 2
 
               echo "Using node: $(node --version)"
-        - run:
-            name: Install Yarn (Windows only)
-            command: npm install --global yarn
+  - run:
+      name: Install PNPM
+      command: npm install --global pnpm

@@ -1,8 +1,7 @@
-# npm-release-management-orb
+# pnpm-release-management-orb
 
-[![CircleCI Build Status](https://circleci.com/gh/forcedotcom/npm-release-management-orb.svg?style=shield&circle-token=7a6dcc6c02f82515aec6533ed1c7253ef38e6e13 "CircleCI Build Status")](https://circleci.com/gh/forcedotcom/npm-release-management-orb) ![Orb Version Badge](https://badges.circleci.com/orbs/salesforce/npm-release-management.svg) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/forcedotcom/npm-release-management-orb/develop/LICENSE.txt)
-
-- [npm-release-management-orb](#npm-release-management-orb)
+![Build Status](https://img.shields.io/circleci/build/github/rkesters/pnpm-release-management/main?token=52570befeeb5f62f3c7a90fbe96f3757179759d8)
+- [pnpm-release-management-orb](#pnpm-release-management-orb)
   - [Usage](#usage)
   - [Note on Version Bumps and Changelogs](#note-on-version-bumps-and-changelogs)
     - [Overriding Version Bump](#overriding-version-bump)
@@ -13,7 +12,7 @@
 
 ## Usage
 
-Example use-cases are provided on the orb [registry page](https://circleci.com/orbs/registry/orb/salesforce/npm-release-management#usage-examples). Source for these examples can be found within the `src/examples` directory.
+Example use-cases are provided on the orb [registry page](https://circleci.com/orbs/registry/orb/rkesters/pnpm-release-management#usage-examples). Source for these examples can be found within the `src/examples` directory.
 
 This orb is designed to make releasing npm packages straightforward and with as little configuration as possible. To get started you will need to:
 
@@ -21,10 +20,10 @@ This orb is designed to make releasing npm packages straightforward and with as 
 
    ```yml
    orbs:
-     release-management: salesforce/npm-release-management@x.y.z
+     release-management: rkesters/pnpm-release-management@x.y.z
    ```
 
-   NOTE: We recommend pinning the major version (e.g. `salesforce/npm-release-management@4`) so that you automatically receive all minor and patch updates.
+   NOTE: We recommend pinning the major version (e.g. `rkesters/pnpm-release-management@4`) so that you automatically receive all minor and patch updates.
 
 2. Setup the required environment variables.
 
@@ -34,7 +33,7 @@ This orb is designed to make releasing npm packages straightforward and with as 
 
    As part of the release job we create a new git tag based on the version in the package.json. This requires that you add a user key that has the permissions to push to github. To do this, simply go to the `SSH Keys` tab in the project settings and follow the directions for adding user keys. See [Using the SF-CLI-BOT for builds](#using-the-sf-cli-bot-for-builds) section on how to use our github bot for this.
 
-4. Follow the [examples](https://circleci.com/orbs/registry/orb/salesforce/npm-release-management#usage-examples) for how to setup your config.yml
+4. Follow the [examples](https://circleci.com/orbs/registry/orb/rkesters/pnpm-release-management#usage-examples) for how to setup your config.yml
 
 ## Note on Version Bumps and Changelogs
 
@@ -86,7 +85,7 @@ Please see the docs for the CLI commands here.  The orb derives the `--location`
 
 ## How To Contribute
 
-We welcome [issues](https://github.com/forcedotcom/npm-release-management-orb/issues) to and [pull requests](https://github.com/forcedotcom/npm-release-management-orb/pulls) against this repository!
+We welcome [issues](https://github.com/forcedotcom/pnpm-release-management-orb/issues) to and [pull requests](https://github.com/forcedotcom/pnpm-release-management-orb/pulls) against this repository!
 
 To publish a new production version:
 

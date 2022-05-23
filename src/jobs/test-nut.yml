@@ -43,8 +43,8 @@ parameters:
       - xlarge
       - 2xlarge
   command:
-    description: 'Custom command that runs NUTs.  By default, yarn test:nuts'
-    default: 'yarn test:nuts'
+    description: 'Custom command that runs NUTs.  By default, pnpm test:nuts'
+    default: 'pnpm test:nuts'
     type: string
 
 executor:
@@ -58,6 +58,7 @@ steps:
   - install-node:
       version: <<parameters.node_version>>
       os: <<parameters.os>>
+  - install-pnpm
   - install-sfdx:
       version: <<parameters.sfdx_version>>
       os: <<parameters.os>>
@@ -87,10 +88,10 @@ steps:
             command: git checkout v<<parameters.repo_tag>> || git checkout <<parameters.npm_module_name>>@<<parameters.repo_tag>>
   - run:
       name: Install dependencies
-      command: yarn
+      command: pnpm install
   - run:
       name: Build
-      command: yarn build
+      command: pnpm build
   - when:
       condition:
         equal: ['linux', <<parameters.os>>]

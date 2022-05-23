@@ -8,7 +8,7 @@ version: 2.1
 # add your orb below, to be used in integration tests (note: a @dev:alpha
 # release must exist.);
 orbs:
-  release-management: salesforce/npm-release-management@<<pipeline.parameters.dev-orb-version>>
+  release-management: rkesters/pnpm-release-management@<<pipeline.parameters.dev-orb-version>>
   orb-tools: circleci/orb-tools@9.0
 
 # Pipeline parameters
@@ -49,7 +49,7 @@ workflows:
       # store CIRCLE_TOKEN as a project env var or Contexts resource
       # if using Contexts, add your context below
       - orb-tools/publish-dev:
-          orb-name: salesforce/npm-release-management
+          orb-name: rkesters/pnpm-release-management
           requires:
             - orb-tools/pack
           context: orb-token
@@ -83,7 +83,7 @@ workflows:
       # be skipped.
       # e.g. [semver:patch] will cause a patch version to be published.
       - orb-tools/dev-promote-prod-from-commit-subject:
-          orb-name: salesforce/npm-release-management
+          orb-name: rkesters/pnpm-release-management
 
           add-pr-comment: false
           fail-if-semver-not-indicated: true

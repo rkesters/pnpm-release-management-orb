@@ -23,6 +23,7 @@ steps:
   - install-node:
       version: <<parameters.node_version>>
       os: linux
+  - install-pnpm
   - install-sf-release
   - run:
       name: Testing SF Inclusion
@@ -32,12 +33,12 @@ steps:
         cd cli
 
         sf-release npm:dependencies:pin --tag latest
-        yarn install
-        yarn compile
+        pnpm install
+        pnpm compile
 
         rm -fr node_modules
 
         cd ../sfdx-cli
-        yarn add file:/home/circleci/project/cli --network-concurrency 1
-        yarn pack:tarballs -t linux-x64 --no-xz
-        yarn pack:verify
+        pnpm add file:/home/circleci/project/cli --network-concurrency 1
+        pnpm pack:tarballs -t linux-x64 --no-xz
+        pnpm pack:verify

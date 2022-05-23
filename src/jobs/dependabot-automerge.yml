@@ -27,11 +27,12 @@ executor:
 
 steps:
   - install-node
+  - install-pnpm
   - checkout
   - install-sf-release
   - run:
       name: Install dependencies
-      command: yarn
+      command: pnpm install 
 
   - when:
       condition: <<parameters.skip-ci>>

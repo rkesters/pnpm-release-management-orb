@@ -31,6 +31,7 @@ steps:
   - install-node:
       version: <<parameters.node_version>>
       os: linux
+  - install-pnpm
   - checkout
   - install-sf-release
 

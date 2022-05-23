@@ -23,7 +23,7 @@ parameters:
   command:
     description: command that will execute tests
     type: string
-    default: 'yarn test'
+    default: 'pnpm test'
 
 executor:
   name: << parameters.os >>
@@ -32,13 +32,14 @@ steps:
   - install-node:
       version: <<parameters.node_version>>
       os: <<parameters.os>>
+  - install-pnpm
   - checkout
   - run:
       name: Install dependencies
-      command: yarn
+      command: pnpm install
   - run:
       name: Build
-      command: yarn build
+      command: pnpm build
   - when:
       condition:
         equal: ['linux', <<parameters.os>>]

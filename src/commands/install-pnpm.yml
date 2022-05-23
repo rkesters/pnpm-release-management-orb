@@ -1,0 +1,19 @@
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+# How to author commands: https://circleci.com/docs/2.0/reusing-config/#authoring-reusable-commands
+description: >
+  Install pnpm version first
+
+parameters:
+  version:
+    description: version of node to install and use
+    default: latest
+    type: string
+
+steps:
+  - run:
+      name: Install and use node version
+      command: npm i -g pnpm@<<parameters.version>>
+
