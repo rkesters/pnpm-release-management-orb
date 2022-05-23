@@ -32,7 +32,7 @@ steps:
   - install-sf-release
   - run:
       name: Install dependencies
-      command: pnpm install 
+      command: pnpm install
 
   - when:
       condition: <<parameters.skip-ci>>

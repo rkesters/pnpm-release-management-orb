@@ -50,7 +50,7 @@ steps:
   - configure-github
   - run:
       name: Install dependencies
-      command: pnpm install 
+      command: pnpm install
   - run:
       name: Build
       command: pnpm build

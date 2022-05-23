@@ -60,7 +60,7 @@ steps:
         if [[ "$MESSAGE" == *"$GIT_KEY_WORD"* ]]; then
             npm install sfdx-cli --global
             sfdx -v
-            pnpm install 
+            pnpm install
             pnpm build
             echo "Environment Variables:"
             env

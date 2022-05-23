@@ -8,7 +8,7 @@ description: >
 usage:
   version: 2.1
   orbs:
-    release-management: salesforce/npm-release-management@x.y.z
+    release-management: rkesters/pnpm-release-management@x.y.z
 
   workflows:
     version: 2.1
