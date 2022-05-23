@@ -11,5 +11,5 @@ orbs:
   sfchangecase: salesforce/change-case-management@3.2
 
 display:
-  home_url: "https://circleci.com/orbs/registry/orb/salesforce/npm-release-management"
-  source_url: "https://github.com/forcedotcom/npm-release-management-orb"
+  home_url: "https://circleci.com/orbs/registry/orb/rkesers/pnpm-release-management"
+  source_url: "https://github.com/rkesters/pnpm-release-management-orb"
